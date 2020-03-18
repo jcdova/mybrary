@@ -17,7 +17,7 @@ require('dotenv').config()
 // const database = require('./keys').mongoURI;
 // const DATABASE_URL = require('./.env');
 
-mongoose.connect(`mongodb://${process.env.DB_USER}:${process.env.DB_PASS}@ds233208.mlab.com:33208/mybrary`, {
+mongoose.connect(process.env.DATABASE_URL, {
   useNewUrlParser: true, useUnifiedTopology: true
 })
 
