@@ -14,9 +14,7 @@ app.use(express.static('public'))
 const mongoose = require('mongoose')
 
 const database = require('./keys').mongoURI;
-// mongoose.connect('mongodb://jcdova:mixx49@ds233208.mlab.com:33208/mybrary', {
-//   useNewUrlParser: true, useUnifiedTopology: true
-// })
+
 mongoose.connect(database, {
   useNewUrlParser: true, useUnifiedTopology: true
 })
