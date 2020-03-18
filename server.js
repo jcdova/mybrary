@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config()
+}
+
 const express = require('express')
 const app = express()
 const expressLayouts = require('express-ejs-layouts')
@@ -12,7 +16,7 @@ app.use(expressLayouts)
 app.use(express.static('public'))
 
 const mongoose = require('mongoose')
-require('dotenv').config()
+// require('dotenv').config()
 
 // const database = require('./keys').mongoURI;
 // const DATABASE_URL = require('./.env');
