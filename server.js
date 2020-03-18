@@ -12,10 +12,12 @@ app.use(expressLayouts)
 app.use(express.static('public'))
 
 const mongoose = require('mongoose')
+require('dotenv').config()
 
-const database = require('./keys').mongoURI;
+// const database = require('./keys').mongoURI;
+// const DATABASE_URL = require('./.env');
 
-mongoose.connect(database, {
+mongoose.connect(`mongodb://${process.env.DB_USER}:${process.env.DB_PASS}@ds233208.mlab.com:33208/mybrary`, {
   useNewUrlParser: true, useUnifiedTopology: true
 })
 
